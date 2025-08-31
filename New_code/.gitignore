@@ -1,0 +1,453 @@
+# AI-Driven Risk Prediction Engine for Chronic Care Patients
+# Comprehensive .gitignore for Healthcare AI Project
+
+# ============================================================================
+# Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.coverage.*
+.cache
+coverage.xml
+*.cover
+
+# ============================================================================
+# Healthcare Data & PHI (HIPAA Compliance)
+# ============================================================================
+# Patient data - NEVER commit healthcare data
+data/raw/*
+data/processed/*
+data/real_patients/*
+data/production/*
+*.csv
+*.xlsx
+*.xls
+*.json
+*.xml
+*.hl7
+*.dicom
+*.dcm
+*.nii
+*.nifti
+
+# Allow sample/synthetic data for demos
+!data/synthetic/sample_*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/synthetic/.gitkeep
+
+# PHI and sensitive files
+*patient*
+*phi*
+*hipaa*
+*medical_record*
+*ehr*
+*.patient
+*.phi
+
+# ============================================================================
+# Machine Learning Models & Artifacts
+# ============================================================================
+models/saved/*
+models/checkpoints/*
+models/production/*
+models/trained/*
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.pb
+*.onnx
+*.pt
+*.pth
+*.model
+*.weights
+
+# Allow model configuration files
+!models/saved/.gitkeep
+!models/checkpoints/.gitkeep
+!models/config/
+
+# MLflow artifacts
+mlruns/
+mlflow_tracking/
+
+# Weights & Biases
+wandb/
+
+# ============================================================================
+# Outputs & Results
+# ============================================================================
+outputs/reports/*
+outputs/figures/*
+outputs/results/*
+outputs/predictions/*
+outputs/evaluations/*
+results/
+predictions/
+evaluations/
+reports/
+
+# Allow directory structure
+!outputs/reports/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/results/.gitkeep
+
+# ============================================================================
+# Logs & Monitoring
+# ============================================================================
+logs/
+*.log
+*.log.*
+log/
+logging/
+*.out
+*.err
+
+# Specific log patterns
+training_*.log
+inference_*.log
+pipeline_*.log
+dashboard_*.log
+error_*.log
+debug_*.log
+
+# ============================================================================
+# Virtual Environments
+# ============================================================================
+# Python virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env/
+.ENV/
+.env.bak/
+.venv.bak/
+
+# Conda environments
+.conda/
+.miniconda/
+.anaconda/
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# ============================================================================
+# IDE & Editor Files
+# ============================================================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================================================
+# Jupyter Notebooks
+# ============================================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb
+!notebooks/examples/*.ipynb
+!docs/tutorials/*.ipynb
+
+# Jupyter Lab
+.jupyter/
+.local/
+
+# ============================================================================
+# Configuration Files (Sensitive)
+# ============================================================================
+# API Keys and secrets
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+config.ini
+settings.ini
+secrets.json
+credentials.json
+api_keys.json
+.secrets
+.credentials
+
+# Database configurations
+database.ini
+db_config.json
+connection_strings.txt
+
+# Clinical system configurations
+ehr_config.json
+clinical_api_keys.json
+hospital_credentials.json
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Database Files
+# ============================================================================
+*.sqlite
+*.sqlite3
+*.db
+*.database
+*.sql
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
+tmp/
+temp/
+cache/
+.cache/
+.tmp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.lock
+
+# ============================================================================
+# Documentation Build
+# ============================================================================
+docs/_build/
+docs/build/
+site/
+_site/
+
+# Sphinx
+docs/_build
+docs/_static
+docs/_templates
+
+# ============================================================================
+# Security & Compliance
+# ============================================================================
+# Security scan results
+security_report.json
+vulnerability_scan.txt
+audit_results.json
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# ============================================================================
+# Deployment & Infrastructure
+# ============================================================================
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+*.kubeconfig
+k8s-secrets/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# ============================================================================
+# Cloud Provider Specific
+# ============================================================================
+# AWS
+.aws/
+*.pem
+
+# Azure
+.azure/
+
+# Google Cloud
+.gcloud/
+*.json # Service account keys
+
+# ============================================================================
+# Monitoring & Performance
+# ============================================================================
+# Performance profiling
+*.prof
+*.profile
+performance_results/
+
+# Memory dumps
+*.dump
+*.dmp
+
+# ============================================================================
+# Backup Files
+# ============================================================================
+*.backup
+*.bak
+*.old
+*~
+\#*\#
+.#*
+
+# ============================================================================
+# Custom Project Specific
+# ============================================================================
+# Clinical dashboard cache
+dashboard_cache/
+streamlit_cache/
+
+# Model experimentation
+experiments/
+scratch/
+playground/
+
+# Clinical validation artifacts
+validation_reports_sensitive/
+clinical_review/
+peer_review/
+
+# Deployment artifacts
+deployment/
+production_configs/
+staging_configs/
+
+# ============================================================================
+# Allow Important Files
+# ============================================================================
+# Ensure important files are not ignored
+!README.md
+!requirements.txt
+!.gitignore
+!.github/
+!docs/
+!tests/
+!scripts/
+!config/settings.py.example
+!docker-compose.yml.example
+
+# Sample configuration files
+!config/settings.example.json
+!config/database.example.ini
+
+# Documentation assets
+!docs/images/*.png
+!docs/images/*.jpg
+!docs/assets/
+
+# Test fixtures (non-sensitive)
+!tests/fixtures/synthetic_*.json
+!tests/data/mock_*.csv
