@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Care Risk Prediction System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1><i class="fas fa-heartbeat me-2"></i>Chronic Care Risk Prediction System</h1>
+                    <p class="mb-0 text-white-50">AI-Powered Healthcare Risk Management</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <i class="fas fa-hospital-user fa-4x text-primary mb-4"></i>
+                            <h2 class="card-title mb-4">Welcome to Your Healthcare Dashboard</h2>
+                            <p class="card-text lead mb-4">
+                                Monitor patient risk, track outcomes, and improve care delivery with our 
+                                comprehensive chronic care management platform.
+                            </p>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="dashboard-card">
+                                        <i class="fas fa-users dashboard-card-icon text-primary"></i>
+                                        <h3 class="dashboard-card-value">2,847</h3>
+                                        <p class="dashboard-card-label">Active Patients</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dashboard-card">
+                                        <i class="fas fa-exclamation-triangle dashboard-card-icon text-warning"></i>
+                                        <h3 class="dashboard-card-value">412</h3>
+                                        <p class="dashboard-card-label">High Risk</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dashboard-card">
+                                        <i class="fas fa-chart-line dashboard-card-icon text-success"></i>
+                                        <h3 class="dashboard-card-value">87.2%</h3>
+                                        <p class="dashboard-card-label">Model Accuracy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                                <a href="/dashboard" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-chart-area me-2"></i>Risk Dashboard
+                                </a>
+                                <a href="/cohort" class="btn btn-outline-primary btn-lg">
+                                    <i class="fas fa-users me-2"></i>View Patients
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="text-center">
+                <p>&copy; 2025 Healthcare AI Solutions. All rights reserved.</p>
+                <small>Chronic Care Risk Prediction Engine v1.0.0</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
